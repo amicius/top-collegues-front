@@ -1,4 +1,20 @@
-<div class="text-center">
-    <h1>Application Employé Du Mois</h1>
-    <app-accueil-component></app-accueil-component>
-</div>
+<header>
+    <!-- Entête -->
+</header>
+<nav class="navbar navbar-dark bg-dark d-flex justify-content-start">
+    <a routerLink="/accueil" routerLinkActive="active-link">Acceuil</a>
+    <a routerLink="/ajout" routerLinkActive="active-link">Ajout Utilisateur</a>
+</nav>
+<main>
+
+    <!-- le composant défini dans la route courante va être inséré à cet endroit -->
+
+    <!-- au regard de la configuration précédente, 
+                    /page1 va insérer le composant AComponent à cet emplacement
+                    /page2 a insérer le composant BComponent à cet emplacement
+                -->
+    <router-outlet></router-outlet>
+</main>
+<footer>
+    <!-- Pied de page -->
+</footer>

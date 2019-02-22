@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Collegue, Avis, Vote } from '../models';
+import { Collegue, Avis, Vote, ModelCollegue } from '../models';
 import { Observable, of, Subject } from 'rxjs';
 import { tap } from 'rxjs/operators'
 import { environment } from '../../environments/environment';
@@ -39,5 +39,10 @@ export class DataService {
 
   donnerUnAvis(collegue: Collegue, avis: Avis): Observable<Collegue> {
     return this._http.patch<Collegue>(`${URL_BACKEND}/collegues/${collegue.pseudo}`, `{ "action" : "${avis}" }`, httpOptions).pipe(tap(value => this.voteSupprimeSub.next({ collegue: value, avis })));
+  }
+
+  addCollegue(modelCollegue: ModelCollegue) {
+    return this._http.post(`${URL_BACKEND}/collegues`, modelCollegue, httpOptions); // ne pas oublier l'ente, ici httpOptions
+
   }
 }

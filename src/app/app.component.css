@@ -1,0 +1,9 @@
+nav {
+    margin-bottom: 1ch;
+}
+a {
+    margin: 1ch;
+}
+.active-link {
+    color: brown;
+}

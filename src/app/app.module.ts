@@ -11,6 +11,9 @@ import { AccueilComponentComponent } from './accueil-component/accueil-component
 import { ScorePipe } from './pipes/score.pipe';
 import { HistoriqueVotesComponent } from './historique-votes/historique-votes.component';
 import { VoteCountComponent } from './vote-count/vote-count.component';
+import { NouveauCollegueTemplateFormComponent } from './nouveau-collegue-template-form/nouveau-collegue-template-form.component';
+import { FormsModule } from '@angular/forms';
+import { MenuComponentComponent } from './menu-component/menu-component.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +24,16 @@ import { VoteCountComponent } from './vote-count/vote-count.component';
     AccueilComponentComponent,
     ScorePipe,
     HistoriqueVotesComponent,
-    VoteCountComponent
+    VoteCountComponent,
+    NouveauCollegueTemplateFormComponent,
+    MenuComponentComponent
   ],
   imports: [
     NgbModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
 
   providers: [],
