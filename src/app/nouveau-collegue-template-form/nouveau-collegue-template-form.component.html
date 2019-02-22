@@ -6,7 +6,7 @@
     <input type="text" name="pseudo" #pseudo="ngModel" [(ngModel)]="modelCollegue.pseudo" required minlength="2"
       placeholder="Pseudo">
 
-    <input type="text" name="imageURL" [(ngModel)]="modelCollegue.imageURL" placeholder="URL de l'image">
+    <input type="text" name="photoUrl" [(ngModel)]="modelCollegue.photoUrl" placeholder="URL de l'image">
     <button (click)="valider()" [disabled]="monForm.invalid">Valider</button>
   </div>
 </form>
